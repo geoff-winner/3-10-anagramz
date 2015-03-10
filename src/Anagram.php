@@ -1,13 +1,27 @@
 <?php
         class Anagram
     {
-        function findAnagram($input_anagram, $input_2) {
+        function findAnagram($input_anagram, $input_2)
 
-        if($input_anagram != $input_2) {
-            return("False");
+        {   $words1 = str_split($input_anagram);
+            $words2 = str_split($input_2);
+            
+
+
+
+
+            if($input_anagram == $input_2)
+                return ("Yes it is an anagram");
+
+            elseif($input_anagram !== $input_2)
+                return ("It is not an anagram");
+
+            elseif()
         }
+
+
     }
-    }
+
 
 
 

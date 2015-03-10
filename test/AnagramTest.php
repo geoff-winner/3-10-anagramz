@@ -8,14 +8,14 @@
         {
                 //Arrange
                 $test_Anagram = new Anagram;
-                $input_anagram = "a";
-                $input_2 = "b";
+                $input_anagram ["time", "chocolate", "tomato"];
+                $input_2 = ["time", "chocolat", "tomato"];
 
                 //Act
-                $result = $test_Anagram->findAnagram ($input_anagram, $input_2);
+                $result = $test_Anagram->findAnagram ($input_anagram[0], $input_2[0]);
 
                 //Assert
-                $this->assertEquals("b", $result);
+                $this->assertEquals("It is not an anagram", $result);
 
         }
 
