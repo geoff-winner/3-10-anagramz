@@ -5,7 +5,10 @@
 
     $app = new Silex\Application();
 
-    $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path'=> __DIR__ .'/../views/'
+    $app['debug']=TRUE;
+
+    $app->register(new Silex\Provider\TwigServiceProvider(),
+        array('twig.path' => __DIR__.'/../views/'
 
     ));
 
@@ -15,9 +18,11 @@
     });
 
     $app->get("/view_results", function() use($app) {
-
+        $user_input = new Anagram;
+        $user_matches = $user_input->findAnagram($_GET['input_anagram'], $_GET['input_2']);
+        return $app['twig']->render('view_results.twig', array('anagram' => $user_matches));
     });
-    }
 
+    return $app;
 
 ?>
