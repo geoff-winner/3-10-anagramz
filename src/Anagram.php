@@ -9,15 +9,15 @@
             $array2 = sort($words2);
 
             if($input_anagram == $input_2){
-                return "This is the same word";
+                return $input_anagram . " is the same word as " . $input_2;
             }
 
             elseif($words1 !== $words2){
-                return "It is not an anagram";
+                return $input_2 . " is not an anagram of " . $input_anagram;
             }
 
             elseif($words1 == $words2){
-                return "Yes it is an anagram";
+                return $input_2 . " is an anagram of " . $input_anagram;
             };
 
         }

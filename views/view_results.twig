@@ -6,7 +6,9 @@
 <body>
     <div class='container'>
         <h1>List of anagrams:</h1>
-        <h4>{{ anagram }}</h4>
+        {% for Anagrams in anagram %}
+            <h4>{{ Anagrams }}</h4>
+        {% endfor %}
     </div>
 </body>
 </html>
